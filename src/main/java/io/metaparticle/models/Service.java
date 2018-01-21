@@ -32,6 +32,12 @@ public class Service {
     private List<ServiceSpecification> services;
 
     /**
+     * The jobs property.
+     */
+    @JsonProperty(value = "jobs")
+    private List<JobSpecification> jobs;
+
+    /**
      * The serve property.
      */
     @JsonProperty(value = "serve")
@@ -94,6 +100,26 @@ public class Service {
      */
     public Service withServices(List<ServiceSpecification> services) {
         this.services = services;
+        return this;
+    }
+
+    /**
+     * Get the jobs value.
+     *
+     * @return the jobs value
+     */
+    public List<JobSpecification> jobs() {
+        return this.jobs;
+    }
+
+    /**
+     * Set the jobs value.
+     *
+     * @param jobs the jobs value to set
+     * @return the Service object itself.
+     */
+    public Service withJobs(List<JobSpecification> jobs) {
+        this.jobs = jobs;
         return this;
     }
 
